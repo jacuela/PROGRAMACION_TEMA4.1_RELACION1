@@ -17,8 +17,8 @@ public class Ejercicio1 {
     public static void main(String[] args) {
         // TODO code application logic here
         
-        Bicicleta miBici=new Bicicleta();
-        Bicicleta tuBici=new Bicicleta();
+        Bicicleta miBici=new Bicicleta("Juan");
+        Bicicleta tuBici=new Bicicleta("Alicia");
         
         miBici.pedalear();
         miBici.pedalear();
@@ -36,10 +36,12 @@ public class Ejercicio1 {
         miBici.mostrarVelocidad();
         tuBici.mostrarVelocidad();
         
-//        System.out.println("--------------------");
-//        System.out.println(miBici.getPropietario()+":"+miBici.obtenerVelocidad()+" km/h");
-//        System.out.printf("%s: %.2f km/h\n",tuBici.getPropietario(),tuBici.obtenerVelocidad());
-//        
+        miBici.obtenerVelocidad();
+        
+        System.out.println("--------------------");
+        System.out.println(miBici.getPropietario()+"-->"+miBici.obtenerVelocidad()+" km/h");
+        System.out.printf("%s: %.2f km/h\n",tuBici.getPropietario(),tuBici.obtenerVelocidad());
+        
         
         
         
