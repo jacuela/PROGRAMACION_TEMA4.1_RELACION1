@@ -15,6 +15,17 @@ public class Ejercicio2 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Cubo unCubo=new Cubo(5);
+        
+        unCubo.pintar();
+        unCubo.rellenar(4);
+        unCubo.pintar();
+        unCubo.rellenar(2);
+        unCubo.pintar();
+        unCubo.vaciar();
+        unCubo.pintar();
+        
+        
     }
     
 }
