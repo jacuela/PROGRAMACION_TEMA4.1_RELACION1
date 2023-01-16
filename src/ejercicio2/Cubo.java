@@ -37,7 +37,14 @@ public class Cubo {
     }
     
     public void pintar(){
-        
+        for (int nivel = this.capacidadMax; nivel > 0; nivel--) {
+            if (this.contenido >=nivel)
+                System.out.println("#~~~~~~#");
+            else
+                System.out.println("#      #"); 
+        }
+        System.out.println("########");
+        System.out.println("");
         
     }
     
