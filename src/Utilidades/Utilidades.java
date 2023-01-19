@@ -12,7 +12,7 @@ public class Utilidades {
     
     public static boolean checkEmail(String email){
         
-        //Lo hago sencillamente. Habria que programarlo bien
+        //Lo hago a lo fácil
         if (    email.contains("@") && 
                 email.contains(".") &&
                (email.indexOf("@")<email.indexOf("."))

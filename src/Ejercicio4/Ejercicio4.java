@@ -34,7 +34,7 @@ public class Ejercicio4 {
                     System.out.print("Dime tu email: ");
                     email=teclado.nextLine();
                     
-                    if(!Utilidades.checkEmail(email)){
+                    if(!Utilidades.checkEmail(email)){  //idem a Utilidades.checkEmail(email)==false
                         System.out.println("  ERROR: el formato es incorrecto");
                     }
                     
