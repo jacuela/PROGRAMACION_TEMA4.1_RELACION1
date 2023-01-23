@@ -7,7 +7,7 @@ package ejercicio5;
 
 /**
  *
- * @author juan.antonio
+ * @author juan.antonio cuello
  */
 public class Casa {
     

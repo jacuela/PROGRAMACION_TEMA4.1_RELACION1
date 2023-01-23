@@ -66,12 +66,6 @@ public class Contacto {
     
     
     public void imprimirContacto(){
-        
         System.out.printf("%-4d %10s %20s %10s\n",id,nombre,email,telefono);
-//        System.out.println("Contacto:"+getId());
-//        System.out.println("Nombre:"+getNombre());
-//        System.out.println("Email:"+getEmail());
-//        System.out.println("Telefono:"+getTelefono()+"\n");
-     
     }
 }

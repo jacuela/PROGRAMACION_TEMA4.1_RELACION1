@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author juan.antonio
+ * @author juan.antonio cuello
  */
 public class Ejercicio5 {
       //static Scanner teclado=new Scanner(System.in);
