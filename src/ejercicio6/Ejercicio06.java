@@ -29,8 +29,6 @@ public class Ejercicio06 {
         listaContactos[Contacto.getContador()]=new Contacto("Juan","juan@gmail.com","612345678");
         listaContactos[Contacto.getContador()]=new Contacto("Alicia","alicia@gmail.com","123456789");
         
-        System.out.println("**** EJERCICIO 06 ****");
-        
         do {
             mostrarMenu();
             opcion=Integer.parseInt(entrada.nextLine());
