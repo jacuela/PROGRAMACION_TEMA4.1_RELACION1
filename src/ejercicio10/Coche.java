@@ -78,5 +78,18 @@ public class Coche {
         System.out.println("");
     }
     
+     public String getFichaSimplicada(){
+        String ficha="";
+        
+        ficha=String.format("%s %s - %d %s %s",
+                            this.marca,
+                            this.modelo,
+                            this.motor.getPotencia(),
+                            this.motor.getCombustible(),
+                            this.motor.getCambio()
+                            );
+        return ficha;
+    }
+    
     
 }

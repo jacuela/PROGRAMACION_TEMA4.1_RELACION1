@@ -28,6 +28,15 @@ public class Ejercicio10 {
                                    TipoCambio.AUTOMATICO,
                                    19);
         
+//        //Meto el segundo coche en codigo para agilizar
+//        Coche cochePorsche=new Coche("PORSCHE","911",250,
+//                        TipoCombustible.GASOLINA,
+//                        TipoCambio.MANUAL,
+//                        22);
+//        
+//  
+        
+        
         //Segundo coche por teclado
         System.out.println("Creando un nuevo coche:");
         System.out.print("  Marca:");
@@ -62,19 +71,32 @@ public class Ejercicio10 {
                                       tipoCombus,tipoCambio, radio);
         
         
+        System.out.println(cocheVolvo.getFichaSimplicada());
+        System.out.println(cochePorsche.getFichaSimplicada());
+        
+        
         cocheVolvo.imprimirFicha();
         cochePorsche.imprimirFicha();
         
         
-        cocheVolvo.recorrer(1000);
-        cocheVolvo.cambiarRueda(3);
+        cocheVolvo.recorrer(10000);
+        cocheVolvo.cambiarRueda(4);
         cochePorsche.recorrer(500);
         
         cocheVolvo.imprimirFicha();
         cochePorsche.imprimirFicha();
+       
         
-        cochePorsche=null;
-        cochePorsche.imprimirFicha();
+        cocheVolvo=null;
+        
+        System.out.println("************************************************"); 
+        System.out.println("!!!Ahora va a fallar porque he perdido el coche");
+        System.out.println("Al borrarlo, no hay rastro de sus ruedas y su motor");
+        System.out.println("************************************************"); 
+        
+        System.out.println(cocheVolvo.getFichaSimplicada());
+        
+        
         
         
         
