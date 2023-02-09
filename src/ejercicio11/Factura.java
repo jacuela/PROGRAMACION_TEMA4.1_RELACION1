@@ -5,6 +5,8 @@
  */
 package ejercicio11;
 
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -14,25 +16,15 @@ import java.util.Scanner;
  */
 public class Factura {
     private String cif;
-    private String fecha;
+    private LocalDate fecha;
     private ArrayList<LineaFactura> lineas;
     private final double IVA;
 
-    public Factura(String cif, String fecha) {
+    public Factura(String cif, LocalDate fecha) {
         this.cif = cif;
         this.fecha = fecha;
         lineas=new ArrayList<>();
         IVA=21;
-        
-        
-        //Aqúi voy a añadir las 2 primeras lineas para tener datos metidos
-        LineaFactura l1=new LineaFactura("REF004","Barra de pan",2,0.80);
-        this.lineas.add(l1);
-        this.lineas.add(new LineaFactura("REF001","Leche",1,1.5));
-        
-        System.out.println("....... 2 lineas añadida (en el constructor)");
-        
-        
     }
 
     public String getCif() {
@@ -43,33 +35,22 @@ public class Factura {
         this.cif = cif;
     }
 
-    public String getFecha() {
+    public LocalDate getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(LocalDate fecha) {
         this.fecha = fecha;
     }
 
+   
     public double getIVA() {
         return IVA;
     }
 
     
-    public void añadirLinea(){
-        Scanner teclado=new Scanner(System.in);
-        
-        System.out.println("Añadiendo uan nueva linea....");
-        System.out.println(".............................");
-        System.out.print("Ref: ");
-        String ref=teclado.nextLine();
-        System.out.print("Descripcion: ");
-        String descripcion=teclado.nextLine();
-        System.out.print("Cantidad: ");
-        int cantidad=Integer.parseInt(teclado.nextLine());
-        System.out.print("Precio Unidad: ");
-        double precioUnidad=Double.parseDouble(teclado.nextLine());
-        
+    public void añadirLinea(String ref, String descripcion, int cantidad, double precioUnidad){
+                
         this.lineas.add(new LineaFactura(ref,descripcion,cantidad,precioUnidad));
         System.out.println(".......linea añadida");
         
@@ -95,10 +76,13 @@ public class Factura {
     
     
     public void imprimirFactura(){
+        
+        DateTimeFormatter dtf=DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        
         System.out.println("===================================================");
         System.out.println("                 FACTURA");
         System.out.println("CIF:   "+this.cif);
-        System.out.println("Fecha: "+this.fecha);
+        System.out.println("Fecha: "+this.fecha.format(dtf));
         System.out.println("");
         System.out.println("CANT    DESCRIPCION   PRECIO U    IMPORTE");
         System.out.println("---------------------------------------------");

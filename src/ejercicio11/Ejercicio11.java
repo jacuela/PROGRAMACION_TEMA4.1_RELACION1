@@ -5,6 +5,9 @@
  */
 package ejercicio11;
 
+import java.time.LocalDate;
+import java.util.Scanner;
+
 /**
  *
  * @author Juan Antonio Cuello Alarcon
@@ -16,10 +19,31 @@ public class Ejercicio11 {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        Scanner teclado=new Scanner(System.in);
         
-        Factura factura1=new Factura("B30341111","03/03/2022");
+        Factura factura1=new Factura("B30341111",LocalDate.now());
         
-        factura1.añadirLinea();
+        //Aqúi voy a añadir las 2 primeras lineas para tener datos metidos
+        factura1.añadirLinea("REF004","Barra de pan",2,0.80);
+        factura1.añadirLinea("REF001","Leche",1,1.5);
+        
+        factura1.imprimirFactura();
+        
+        
+        //PROGRAMO AHORA LA PEDIDA DE DATOS
+        System.out.println("Añadiendo uan nueva linea....");
+        System.out.println(".............................");
+        System.out.print("Ref: ");
+        String ref=teclado.nextLine();
+        System.out.print("Descripcion: ");
+        String descripcion=teclado.nextLine();
+        System.out.print("Cantidad: ");
+        int cantidad=Integer.parseInt(teclado.nextLine());
+        System.out.print("Precio Unidad: ");
+        double precioUnidad=Double.parseDouble(teclado.nextLine());
+        
+        factura1.añadirLinea(ref,descripcion,cantidad,precioUnidad);
+        
         factura1.imprimirFactura();
         
         
