@@ -17,6 +17,7 @@ public class Ejercicio2 {
         // TODO code application logic here
         Cubo unCubo=new Cubo(5);
         
+        
         unCubo.pintar();
         unCubo.rellenar(4);
         unCubo.pintar();
@@ -24,7 +25,6 @@ public class Ejercicio2 {
         unCubo.pintar();
         unCubo.vaciar();
         unCubo.pintar();
-        
         
     }
     
