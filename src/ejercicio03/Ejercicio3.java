@@ -16,55 +16,56 @@ public class Ejercicio3 {
     public static void main(String[] args) {
         // TODO code application logic here
         
+        //PARTE1
+        System.out.println("PARTE1 - tres variables arrays");
+        System.out.println("===================");
+        Libro libro1=new Libro("1984","G.Orswell",1949);
+        Libro libro2=new Libro("LZZ001","Moby Dick","H.Melville",1851);
+        Libro libro3=new Libro("50 sombras","Mike M.",2010);
         
-        //PARTE 1 - USANDO 3 VARIABLES
-//        Libro libro1=new Libro("1984","G.Orswell",1949);
-//        Libro libro2=new Libro("L001","Moby Dick","H.Melville",1851);
-//        Libro libro3=new Libro("50 sombras","Mike M.",2010);
-//        
-//        libro1.setIsbn("L002");
-//        
-//        System.out.println(libro1.citaBibliografica());
-//        System.out.println(libro2.citaBibliografica());
-//        System.out.println(libro3.citaBibliografica());
-//        
-//        
-//        System.out.println(libro1.getIsbn());
-//        System.out.println(libro2.getIsbn());
-//        System.out.println(libro3.getIsbn());
+        libro1.setIsbn("X0046");
         
-        //PARTE 2 - USANDO UN ARRAY
-        Libro [] listaLibros=new Libro[10];
+        //libro1=libro2;   //esto pierde el libro1
         
-        Libro unLibro;
-        int totalLibros=0; //variable aux para llevar el conteo
+        System.out.println(libro1.citaBibliografica());
+        System.out.println(libro2.citaBibliografica());
+        System.out.println(libro3.citaBibliografica());
         
-        unLibro=new Libro("1984","G.Orswell",1949);
-        listaLibros[totalLibros]=unLibro;
-        //Otra forma ahorrando la variable unLibro
-        //listaLibros[totalLibros]=new Libro("1984","G.Orswell",1949);
+        System.out.println("------");
+        System.out.println(libro1.getIsbn());
+        System.out.println(libro2.getIsbn());
+        System.out.println(libro3.getIsbn());
+        
+        
+        //PARTE2
+        System.out.println("");
+        System.out.println("PARTE2 - con arrays");
+        System.out.println("===================");
+        Libro[] listaLibros = new Libro[10];
+        
+        int totalLibros=0; //contador de libros
+        
+        //Creo el primer libro
+        Libro libro=new Libro("1984","G.Orswell",1949);
+        listaLibros[totalLibros]=libro;
         totalLibros++;
         
-        unLibro=new Libro("L001","Moby Dick","H.Melville",1851);
-        listaLibros[totalLibros]=unLibro;
+        //Creo el segundo libro
+        libro=new Libro("L001","Moby Dick","H.Melville",1851);
+        listaLibros[totalLibros]=libro;
         totalLibros++;
-         
-        unLibro=new Libro("50 sombras","Mike M.",2010);
-        listaLibros[totalLibros]=unLibro;
+        
+        //Creo el tercer libro
+        libro=new Libro("50 sombras","Mike M.",2010);
+        listaLibros[totalLibros]=libro;
         totalLibros++;
-         
-        listaLibros[0].setIsbn("X00");
         
         
-        //Imprimo la cita de todos los libros
         for (int i = 0; i < totalLibros; i++) {
             System.out.println(listaLibros[i].citaBibliografica());
         }
         
-        //Imprimo el ISBN de todos los libros
-        for (int i = 0; i < totalLibros; i++) {
-            System.out.println(listaLibros[i].getIsbn());
-        }
+        
         
         
         

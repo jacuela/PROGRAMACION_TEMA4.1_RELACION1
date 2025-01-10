@@ -33,6 +33,56 @@ public class Libro {
     }
 
     //Getter and Setter
+
+    public String getIsbn() {
+        
+        if (this.isbn==null){
+            return String.format("*** [%s] no tiene ISBN ***", this.titulo);
+        }
+        return isbn;
+    }
+
+    public void setIsbn(String isbn) {
+        this.isbn = isbn;
+    }
+
+    public String getTitulo() {
+        return titulo;
+    }
+
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
+    }
+
+    public String getAutor() {
+        return autor;
+    }
+
+    public void setAutor(String autor) {
+        this.autor = autor;
+    }
+
+    public int getAño() {
+        return año;
+    }
+
+    public void setAño(int año) {
+        this.año = año;
+    }
+    
+    public String citaBibliografica(){
+        
+        String cita;
+        cita=String.format("%s, (%d), %s",this.autor,this.año,this.titulo);
+        return cita;
+        
+    }
+    
+    private boolean checkISBN(){
+        
+        
+    }
+    
     
     
     
