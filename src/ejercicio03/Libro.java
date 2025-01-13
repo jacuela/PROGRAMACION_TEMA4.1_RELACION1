@@ -59,7 +59,6 @@ public class Libro {
            System.out.println("ERROR: isbn incorrecto"); 
         }
         
-        this.isbn = isbn;
     }
 
     public String getTitulo() {
