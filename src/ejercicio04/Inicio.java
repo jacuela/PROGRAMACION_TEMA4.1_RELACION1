@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Main.java to edit this template
  */
-package ejercicio04_2024;
+package ejercicio04;
 
-import Utilidades.Utilidades;
+import Utilidades.Util;
 import java.util.Scanner;
 
 /**
@@ -31,19 +31,21 @@ public class Inicio {
             do{
                 System.out.print("Dime el email:");
                 email = teclado.nextLine();
-                if (Utilidades.checkEmail(email)==false){
+                if (Util.checkEmail(email)==false){
                     System.out.println("     ERROR: email incorrecto");
                 }
-            }while (Utilidades.checkEmail(email)==false);
+            }while (Util.checkEmail(email)==false);
             
             listaPersonas[i]=new Persona(nombre,email);
-            System.out.println("--------");
+            System.out.println("-------- añadida. "+
+                    Persona.getContadorPersonas()+" en la lista");
         }
         
-        for (int i = 0; i < 3; i++) {
+        System.out.println("=======================================");
+        for (int i = 0; i < Persona.getContadorPersonas(); i++) {
             System.out.println(listaPersonas[i].getDatos());
         }
-        
+        System.out.println("=======================================");
         
         
         

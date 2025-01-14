@@ -5,7 +5,7 @@
  */
 package ejercicio06;
 
-import Utilidades.Utilidades;
+import Utilidades.Util;
 import java.util.Scanner;
 
 /**
@@ -77,10 +77,10 @@ public class Ejercicio06 {
         do{
             System.out.print("Introduce el email:");
             email=entrada.nextLine();
-            if (Utilidades.checkEmail(email)==false){
+            if (Util.checkEmail(email)==false){
                 System.out.println("  ERROR: email incorrecto");
             }
-        }while(Utilidades.checkEmail(email)==false);  
+        }while(Util.checkEmail(email)==false);  
         
         System.out.print("Introduce el numero de telefono:");
         tlf=entrada.nextLine();

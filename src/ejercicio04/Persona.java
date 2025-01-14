@@ -6,28 +6,54 @@ package ejercicio04;
 
 /**
  *
- * @author juan.antonio
+ * @author juanantoniocuelloalarcon
  */
 public class Persona {
     private String nombre;
     private String email;
-    public static int contadorPersonas=0;
+    private static int contadorPersonas=0;
     
     
-    public Persona(String n,String e){
-        this.nombre=n;
-        this.email=e;
+    public Persona(String n, String e){
+        this.nombre = n;
+        this.email = e;
+       
         Persona.contadorPersonas++;
+        //contasdorPersonas++;  //tambien vale así
         
     }
-    
-    public void imprimirDatos(){
-        System.out.println(this.nombre+" - "+this.email);
-        
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public static int getContadorPersonas() {
+        return contadorPersonas;
+    }
+
+    public static void setContadorPersonas(int contadorPersonas) {
+        Persona.contadorPersonas = contadorPersonas;
     }
     
     
     
+    
+    public String getDatos(){
+        return String.format ("%15s - %s",this.nombre,this.email);
+    }
+ 
     
     
     

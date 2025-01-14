@@ -8,7 +8,7 @@ package Utilidades;
  *
  * @author juan.antonio
  */
-public class Utilidades {
+public class Util {
     
     public static boolean checkEmail(String email){
         

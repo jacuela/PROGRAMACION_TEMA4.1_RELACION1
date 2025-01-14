@@ -8,7 +8,7 @@ package ejercicio09;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-import Utilidades.Utilidades;
+import Utilidades.Util;
 /**
  *
  * @author juan.antonio
@@ -30,11 +30,11 @@ public class Ejercicio09 {
         listaAutores.add(new Autor("Alicia","Cano","Medina","ali@kk.com"));
         
         
-        listaLibros.add(new Libro(Utilidades.generarCodigoLibro(),"El hobitton",
+        listaLibros.add(new Libro(Util.generarCodigoLibro(),"El hobitton",
                            listaAutores.get(0),2020));
         
         
-        listaLibros.add(new Libro(Utilidades.generarCodigoLibro(),"Mi vida bella",
+        listaLibros.add(new Libro(Util.generarCodigoLibro(),"Mi vida bella",
                            listaAutores.get(1),2021));
          
         
@@ -72,9 +72,9 @@ public class Ejercicio09 {
         do {
             System.out.print("E-mail:");
             email=teclado.nextLine();
-            if (!Utilidades.checkEmail(email))
+            if (!Util.checkEmail(email))
                 System.out.println("ERROR: email incorrecto");
-        }while(!Utilidades.checkEmail(email));    
+        }while(!Util.checkEmail(email));    
     
         //En este punto, los parámetros son correcto
         //Creo entonces el autor
@@ -119,7 +119,7 @@ public class Ejercicio09 {
         }while(autorLibro==null);
 
         //Si llego aquí, he encontrado el autor correctamente
-        listaLibros.add(new Libro(Utilidades.generarCodigoLibro(),titulo,
+        listaLibros.add(new Libro(Util.generarCodigoLibro(),titulo,
                            autorLibro,year));
         
         System.out.println("");
