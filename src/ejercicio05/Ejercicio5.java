@@ -89,7 +89,10 @@ public class Ejercicio5 {
                     
                         break;
                 case 4:
-                        buscarCasas(listaCasas,totalCasas);
+                        System.out.println("\n====  Buscar casas por precio ====");
+                        System.out.print("¿Cual es el precio máximo?");
+                        int precioMax=Integer.parseInt(teclado.nextLine());
+                        buscarCasas(listaCasas,totalCasas,precioMax);
                         break;
                 case 5:
                         break;
@@ -106,20 +109,23 @@ public class Ejercicio5 {
     }
 
     
-    private static void buscarCasas(Casa[] listaCasas, int totalCasas) {
-        Scanner teclado=new Scanner(System.in);
-
-        System.out.println("\n====  Buscar casas por precio ====");
-        System.out.print("¿Cual es el precio máximo?");
-        int precioMax=Integer.parseInt(teclado.nextLine());
+    private static void buscarCasas(Casa[] listaCasas, int totalCasas, int precioMax) {
+        //Scanner teclado=new Scanner(System.in);
+        boolean hayCasas=false;
         
         for (int i = 0; i < totalCasas ; i++) {
             
             if (listaCasas[i].getPrecioVenta()<=precioMax){
                System.out.print("CASA "+(i+1)+"-->");
                listaCasas[i].imprimirDatos();
+               hayCasas = true;
             }
         }
+        
+        if (!hayCasas){
+            System.out.println("No hay casas por debajo de dicho precio");
+        }
+        
     
     }
     
