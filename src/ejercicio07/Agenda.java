@@ -48,17 +48,17 @@ public class Agenda {
        
        Contacto contacto=null;
        
-       for (int i = 0; i < this.listaContactos.size(); i++) {
-           if (listaContactos.get(i).getId()==id){
+       for (Contacto c : listaContactos) {
+           if (c.getId()==id){
                //Acabo de encontrar el contacto con dicho id
-               contacto=listaContactos.get(i);
+               contacto=c;
                break;  //una vez encontrado, salgo del for
            }
-        }
+       }
        
-        if (contacto==null)
+       if (contacto==null)
             System.out.println("ERROR: contacto no encontrado");
-        else
+       else
             modificarContacto(contacto);
        
    }
@@ -67,13 +67,12 @@ public class Agenda {
      
        Contacto contacto=null;
        
+       //Lo voy a hacer con un for clásico. Mas lioso.
        for (int i = 0; i < this.listaContactos.size(); i++) {
            if (listaContactos.get(i).getNombre().equalsIgnoreCase(nombre)){
                //Acabo de encontrar el contacto con dicho nombre
                contacto=listaContactos.get(i);
                break;  //una vez encontrado, salgo del for
-
-               
            }
         }
         if (contacto==null)

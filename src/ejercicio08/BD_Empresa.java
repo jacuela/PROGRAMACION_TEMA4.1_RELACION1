@@ -26,12 +26,13 @@ public class BD_Empresa {
     public Empresa buscarCIF(String cif){
         Empresa e;
         
-        for (int i = 0; i < bd.size(); i++) {
-            e=bd.get(i);
-            //e es la empresa actual, apuntada por i
-            if (e.getCif().equals(cif))
-                return e;
+        for (Empresa empresa : bd) {
+            if (empresa.getCif().equals(cif)){
+                return empresa;
+            }
+            
         }
+       
         return null;
     }
     
@@ -42,18 +43,12 @@ public class BD_Empresa {
 
         //Me creo el arraylist resultado vacio
         ArrayList<Empresa> lista=new ArrayList<>();
-        Empresa e;
-        String nombreEmpresaMinu;
         
-        for (int i = 0; i < bd.size(); i++) {
-            //Obtengo la empresa apuntada por i
-            e=bd.get(i);
-            nombreEmpresaMinu=e.getNombre().toLowerCase();
-            //Compruebo si el nombre escrito coincide con el
-            //principio del nombre de la empresa
-            if (nombreEmpresaMinu.startsWith(nombre.toLowerCase()))
+        for (Empresa empresa : bd) {
+          if (empresa.getNombre().toLowerCase().startsWith(nombre.toLowerCase())){
                 //La empresa actual coincide
-                lista.add(e);
+                lista.add(empresa);   
+          }
         }
         return lista;
     }

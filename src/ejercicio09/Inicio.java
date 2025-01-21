@@ -13,7 +13,7 @@ import Utilidades.Util;
  *
  * @author juan.antonio
  */
-public class Ejercicio09 {
+public class Inicio {
 
     /**
      * @param args the command line arguments

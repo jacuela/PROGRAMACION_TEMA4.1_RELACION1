@@ -21,7 +21,11 @@ public class Libro {
         this.autor = autor;
         this.año = año;
     }
-    
+
+    public String getCodigo() {
+        return codigo;
+    }
+ 
         
     public String getCita(){
         String cita;

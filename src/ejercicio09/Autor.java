@@ -23,6 +23,10 @@ public class Autor {
         this.email=email;
     }
 
+    
+    
+    
+    
     public String getApellido1() {
         return apellido1;
     }
