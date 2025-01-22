@@ -37,7 +37,6 @@ public class BD_Empresa {
     }
     
     
-    
     public ArrayList<Empresa> buscarNombre(String nombre){
         
 
@@ -52,6 +51,18 @@ public class BD_Empresa {
         }
         return lista;
     }
+    
+    public boolean exiteCIF(String cif){
+        for (Empresa empresa : bd) {
+            if (empresa.getCif().equalsIgnoreCase(cif)){
+                return true;
+            }
+        }
+        
+        //Si llego aquí, es pq no he encontrado la empresa
+        return false;
+    }
+    
     
     
     

@@ -69,6 +69,17 @@ public class Ejercicio8 {
 //               
 //            }
         }
+        
+        //Voy a crear una empresa que ya existe
+        if (mibd.exiteCIF("B11111111")){
+            System.out.println("Ese CIF ya existe");
+        }
+        else{
+            mibd.addEmpresa(new Empresa("B11111111","Otramala","Neverland"));
+        }
+        
+        
+        
     }
 }
 
