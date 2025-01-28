@@ -79,9 +79,11 @@ public class InicioConMenu {
                 case 3:
                     System.out.println("APELLIDO1 del autor a borrar: ");
                     String apellido = teclado.nextLine();
+                    
                     for (Autor autor : listaAutores) {
                         if (autor.getApellido1().equalsIgnoreCase(apellido)){
                             listaAutores.remove(autor);
+                            
                             break;  //una vez encontrado y borrado, ahora tiempo
                         }
                     }
@@ -89,12 +91,22 @@ public class InicioConMenu {
                 case 4:
                     System.out.println("CODIGO del libro a borrar: ");
                     String codigo = teclado.nextLine();
-                    for (Libro libro : listaLibros) {
+                    Libro libro;
+                    for (int i = 0; i < listaLibros.size(); i++) {
+                        libro = listaLibros.get(i);
                         if (libro.getCodigo().equalsIgnoreCase(codigo)){
-                            listaLibros.remove(libro);
-                            break; //una vez encontrado y borrado, ahora tiempo
+                            listaLibros.remove(i);
+                            break;
                         }
                     }
+                    
+                    
+//                    for (Libro libro : listaLibros) {
+//                        if (libro.getCodigo().equalsIgnoreCase(codigo)){
+//                            listaLibros.remove(libro);
+//                            break; //una vez encontrado y borrado, ahora tiempo
+//                        }
+//                    }
                     break;
                 case 5:
                     System.out.println("Saliendo...");

@@ -22,16 +22,10 @@ public class Autor {
         this.apellido2 = apellido2;
         this.email=email;
     }
-
-    
-    
-    
     
     public String getApellido1() {
         return apellido1;
     }
-    
-    
     
     public String getNombreCita(){
         
