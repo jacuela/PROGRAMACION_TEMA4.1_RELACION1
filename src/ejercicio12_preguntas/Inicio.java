@@ -22,19 +22,8 @@ public class Inicio {
         
         Examen examen = new Examen ("Pablo Motos");
         
-        
-        
-        
-//        for (int i = 0; i < opciones.length; i++) {
-//            opciones[i]="xxx";
-//        }
-        
-        //===========IMPORTANTE====================
-        //cada pregunta tiene que tener su =new porque sino,
-        //no crea otra pregunta y se pierde la anterior
-        //=========================================
-
-        
+       
+        //Me creo la pregunta
         pregunta = new Pregunta(3);        
         pregunta.setEnunciado("Cuanto es 2+3");
         //Respuestas
@@ -45,7 +34,8 @@ public class Inicio {
         pregunta.setOpciones(opciones);
         pregunta.setRespuesta('b');
         //pregunta.imprimirPregunta();
-        examen.addPregunta(pregunta);
+        examen.addPregunta(pregunta); //añado la pregunta al examen
+        
         
         pregunta = new Pregunta(3); 
         pregunta.setEnunciado("Capital de España");
@@ -59,6 +49,8 @@ public class Inicio {
         //pregunta.imprimirPregunta();
         examen.addPregunta(pregunta);
         
+        
+        
         pregunta = new Pregunta(3); 
         pregunta.setEnunciado("Quien escribio el Quijote");
         //Respuestas
@@ -71,6 +63,12 @@ public class Inicio {
         //pregunta.imprimirPregunta();
         examen.addPregunta(pregunta);
         
+        
+        //===========IMPORTANTE====================
+        //cada pregunta tiene que tener su =new porque sino,
+        //no crea otra pregunta y se pierde la anterior
+        //=========================================
+
         
         
         //---------------------------------------------
